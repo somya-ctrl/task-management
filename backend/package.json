@@ -1,20 +1,39 @@
 {
-  "name": "backend",
+  "name": "task-management",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/somya-ctrl/task-management.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/somya-ctrl/task-management/issues"
+  },
+  "homepage": "https://github.com/somya-ctrl/task-management#readme",
   "dependencies": {
+    "@prisma/client": "^7.8.0",
+    "bcryptjs": "^3.0.3",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "helmet": "^8.2.0",
+    "jsonwebtoken": "^9.0.3",
+    "morgan": "^1.11.0",
+    "nodemon": "^3.1.14",
+    "prisma": "^7.8.0",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
-    "nodemon": "^3.1.14"
+    "jest": "^30.4.2",
+    "supertest": "^7.2.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^6.0.3"
   }
 }
