@@ -17,6 +17,5 @@ export const validateQuery = (schema: ZodSchema) => (req: Request, res: Response
     res.status(400).json({ success: false, error: result.error.flatten().fieldErrors });
     return;
   }
-  req.query = result.data as any;
   next();
 };
