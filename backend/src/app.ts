@@ -5,6 +5,7 @@ import morgan from "morgan";
 import {errorMiddleware} from "./middleware/error.middleware";
 import { authMiddleware } from "./middleware/auth.middleware";
 import authRoutes from "./routes/auth.routes";
+import taskRoutes from "./routes/task.routes";
 const app = express();
 app.use(helmet());
 app.use(cors());
@@ -15,7 +16,7 @@ app.get("/health", (_req, res) => {
     res.status(200).json({ status: "ok" });
 });
 app.use("/api/auth", authRoutes);
-// app.use("/api/tasks", taskRoutes);
+app.use("/api/tasks", authMiddleware, taskRoutes);
 
 app.use(errorMiddleware);
 
